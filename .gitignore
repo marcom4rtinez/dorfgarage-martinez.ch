@@ -1,0 +1,4 @@
+# Remove Webstorm & macOS trash
+.idea
+.DS_Store
+
