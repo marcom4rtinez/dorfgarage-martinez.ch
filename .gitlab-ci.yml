@@ -8,5 +8,7 @@ build:
   script:
     # Sync to FTP
     - lftp -e "set ssl:verify-certificate no; open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete . .; bye"
+  tags:
+    - docker
   only:
-  - master
+    - master
